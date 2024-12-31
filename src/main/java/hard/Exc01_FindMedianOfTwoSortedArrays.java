@@ -5,7 +5,7 @@ package hard;
     return the median of the two sorted arrays.
     The overall run time complexity should be O(log (m+n)).
  */
-public class Exc01_hard {
+public class Exc01_FindMedianOfTwoSortedArrays {
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
         // Ensure nums1 is the smaller array
         if (nums1.length > nums2.length) {
@@ -46,7 +46,7 @@ public class Exc01_hard {
     }
 
     public static void main(String[] args) {
-        Exc01_hard solution = new Exc01_hard();
+        Exc01_FindMedianOfTwoSortedArrays solution = new Exc01_FindMedianOfTwoSortedArrays();
         int[] nums1 = {1, 3};
         int[] nums2 = {2};
         System.out.println("Median: " + solution.findMedianSortedArrays(nums1, nums2));

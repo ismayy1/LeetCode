@@ -13,7 +13,7 @@ package madium;
     Return the number of different good strings that can be constructed satisfying
     these properties. Since the answer can be large, return it modulo 109 + 7.
  */
-public class Exc01_medium {
+public class Exc01_NrGoodStringCount {
     public int countGoodStrings(int low, int high, int zero, int one) {
         int mod = 1_000_000_007;
 
@@ -42,7 +42,7 @@ public class Exc01_medium {
     }
 
     public static void main(String[] args) {
-        Exc01_medium gs = new Exc01_medium();
+        Exc01_NrGoodStringCount gs = new Exc01_NrGoodStringCount();
         int low = 3;
         int high = 10;
         int zero = 2;
