@@ -20,7 +20,6 @@ import java.util.Set;
 
 public class Exc03_minimumCostForTickets {
 
-
     public int mincostTickets(int[] days, int[] costs) {
         // Create a set of travel days for quick lookup
         Set<Integer> travelDays = new HashSet<>();
@@ -41,7 +40,6 @@ public class Exc03_minimumCostForTickets {
                 dp[i] = Math.min(cost1Day, Math.min(cost7Day, cost30Day));
             }
         }
-
         return dp[365]; // Minimum cost to cover all days in the year
     }
 
