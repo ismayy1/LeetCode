@@ -25,34 +25,47 @@ package easy;
  */
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Exc02_TwoSum {
     public int[] twoSum(int[] nums, int target) {
+// Map to store the number and its index
+        Map<Integer, Integer> map = new HashMap<>();
 
-        int[] output = new int[0];
-        int sum = 0;
+        for (int i = 0; i < nums.length; i++) {
+            int complement = target - nums[i];
 
-        for (int a : nums) {
-            sum = a + nums[a+1];
-            if (sum == target) {
-                output[0] = a;
-                output[1] = nums[a+1];
+            // Check if the complement is already in the map
+            if (map.containsKey(complement)) {
+                return new int[] {map.get(complement), i};
             }
-            return output;
+
+            // Add the current number and its index to the map
+            map.put(nums[i], i);
         }
-        return null;
+
+        // In case no solution is found (not expected in valid inputs)
+        throw new IllegalArgumentException("No two sum solution");
     }
 
     public static void main(String[] args) {
-        int[] nums = new int[5];
-        nums[0] = 2;
-        nums[1] = 3;
-        nums[2] = 5;
-        nums[3] = 6;
-        nums[4] = 8;
+        Exc02_TwoSum solution = new Exc02_TwoSum();
 
-        Exc02_TwoSum exc02TwoSum = new Exc02_TwoSum();
-        System.out.println(Arrays.toString(exc02TwoSum.twoSum(nums, 11)));
+        int[] nums1 = {2, 7, 11, 15};
+        int target1 = 9;
+        int[] result1 = solution.twoSum(nums1, target1);
+        System.out.println("Indices: [" + result1[0] + ", " + result1[1] + "]"); // Expected output: [0, 1]
+
+        int[] nums2 = {3, 2, 4};
+        int target2 = 6;
+        int[] result2 = solution.twoSum(nums2, target2);
+        System.out.println("Indices: [" + result2[0] + ", " + result2[1] + "]"); // Expected output: [1, 2]
+
+        int[] nums3 = {3, 3};
+        int target3 = 6;
+        int[] result3 = solution.twoSum(nums3, target3);
+        System.out.println("Indices: [" + result3[0] + ", " + result3[1] + "]"); // Expected output: [0, 1]
 
     }
 }
