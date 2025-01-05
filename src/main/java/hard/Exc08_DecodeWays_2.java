@@ -44,7 +44,7 @@ package hard;
     s[i] is a digit or '*'.
  */
 
-public class Exc08_DecodeWays {
+public class Exc08_DecodeWays_2 {
 
     public int numDecodings(String s) {
         final int MOD = 1_000_000_007;
@@ -96,7 +96,7 @@ public class Exc08_DecodeWays {
     }
 
     public static void main(String[] args) {
-        Exc08_DecodeWays solution = new Exc08_DecodeWays();
+        Exc08_DecodeWays_2 solution = new Exc08_DecodeWays_2();
 
         String s1 = "*";
         System.out.println("Number of ways to decode: " + solution.numDecodings(s1)); // Expected: 9
