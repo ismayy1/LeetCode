@@ -25,7 +25,8 @@ public class Exc10_DivideArrayIntoSubArraysWithMinCost_2 {
     public long minimumCost(int[] nums, int k, int dist) {
         //here i, j denotes index
         //if both values are same compare index, else compare value
-        Comparator<Integer> comparator = (i, j)->nums[i]==nums[j]? Integer.compare(i, j): Integer.compare(nums[i], nums[j]);
+        Comparator<Integer> comparator =
+                (i, j)->nums[i]==nums[j]? Integer.compare(i, j): Integer.compare(nums[i], nums[j]);
 
         //tree remove takes O(log n) time, heap takes O(n)
         //Set uses index so there is no duplicates, comparator uses nums[] array
@@ -60,8 +61,10 @@ public class Exc10_DivideArrayIntoSubArraysWithMinCost_2 {
         answer = Math.min(sum, answer);
 
         //now try to slide window and check, is there a optimal value better than before
-        //`prevWindow` starts with 1, remove `prevWindow` and add dist+2 index because till `dist+1` taken before
-        for(int currentWindow = dist+2, prevWindow = 1; currentWindow<n; currentWindow++, prevWindow++) {
+        //`prevWindow` starts with 1, remove `prevWindow` and add dist+2 index because till `dist+1`
+        // taken before
+        for(int currentWindow =
+            dist+2, prevWindow = 1; currentWindow<n; currentWindow++, prevWindow++) {
 
             unused.add(currentWindow); //this can be a smaller value, we utilize later
 
