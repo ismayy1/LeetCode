@@ -38,7 +38,6 @@ public class Exc06_CountPrefixAndSuffixPairs_1 {
                 }
             }
         }
-
         return count;
     }
 
