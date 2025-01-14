@@ -17,6 +17,9 @@ public class Exc26_KthLargestElementInArray {
         // Min-Heap with capacity k
         PriorityQueue<Integer> minHeap = new PriorityQueue<>();
 
+//        Arrays.sort(nums);
+//        System.out.println("nums = " + Arrays.toString(nums));
+
         // Iterate through all numbers in the array
         for (int num : nums) {
             minHeap.add(num); // Add the current number to the heap
