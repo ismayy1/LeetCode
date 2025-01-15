@@ -35,7 +35,6 @@ public class Exc32_MinimizeXOR {
                 setBitsTarget--;
             }
         }
-
         return x;
     }
 
