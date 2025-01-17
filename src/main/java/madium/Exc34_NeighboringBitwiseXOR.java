@@ -18,6 +18,7 @@ package madium;
  */
 
 public class Exc34_NeighboringBitwiseXOR {
+
     public boolean doesValidArrayExist(int[] derived) {
         int n = derived.length;
 
